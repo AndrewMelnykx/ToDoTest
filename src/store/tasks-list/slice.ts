@@ -27,8 +27,14 @@ const TasksSlice = createSlice({
         updateFilteredTasks(state);
       }
     },
-    clearAllTasks: (state) => {
-      state.allTasks = [];
+    clearAllTasks: (state, action: PayloadAction<number[] | undefined>) => {
+      if (action.payload) {
+        state.allTasks = state.allTasks.filter(
+          (task) => !action.payload?.includes(task.id)
+        );
+      } else {
+        state.allTasks = [];
+      }
       updateFilteredTasks(state);
     },
     setFilter: (state, action: PayloadAction<string>) => {

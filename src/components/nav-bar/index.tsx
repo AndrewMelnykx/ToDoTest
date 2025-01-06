@@ -27,11 +27,11 @@ const NavBar = () => {
   };
 
   const handleClearingCompleted = () => {
-    allTasks.forEach((task) => {
-      if (task.status === true) {
-        dispatch(clearAllTasks(task.id));
-      }
-    });
+    const completedTaskIds = allTasks
+      .filter((task) => task.status)
+      .map((task) => task.id);
+    dispatch(clearAllTasks(completedTaskIds));
+
     handleResetting();
   };
   const tasksLeft =
