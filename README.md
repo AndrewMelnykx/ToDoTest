@@ -1,5 +1,8 @@
 # To-Do App
 
+[View the To-Do App Demo](https://andrewmelnykx.github.io/ToDoTest/)
+
+
 This project is a **To-Do Application** built with **React**, **TypeScript**, and **Redux Toolkit**. The app provides a simple yet effective way to manage tasks, showcasing clean architecture, scalable code, and a smooth user experience.
 
 ![image](https://github.com/user-attachments/assets/78ca4fb1-6fac-446d-8347-176c99e57dc5)
