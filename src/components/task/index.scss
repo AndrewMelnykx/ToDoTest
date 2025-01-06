@@ -1,0 +1,66 @@
+$small-screen: 375px;
+
+.task-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.1rem;
+  margin-left: 1rem;
+  width: 550px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 29px 0px;
+  position: relative;
+  cursor: pointer;
+}
+
+.task-name {
+  margin-left: 1rem;
+  flex-grow: 1;
+}
+
+.custom-strikethrough {
+  text-decoration: line-through;
+  text-decoration-color: gray;
+  text-decoration-thickness: 2px;
+  color: lightgray;
+  flex-grow: 1;
+}
+
+.delete-button {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.delete-button img {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+}
+
+.task-wrapper:hover .delete-button {
+  opacity: 1;
+  visibility: visible;
+}
+
+.task-wrapper:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+@media screen and (max-width: $small-screen) {
+  .task-wrapper {
+    width: 320px;
+    font-size: 13px;
+    margin-right: 1rem;
+  }
+}

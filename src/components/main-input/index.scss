@@ -1,0 +1,111 @@
+$white: #ffffff;
+$light-blue: #80c7ff;
+$light-purple: #b8a7ff;
+$grey: #ccc;
+$blue: #2196f3;
+$box-shadow-color: rgba(100, 100, 111, 0.2);
+$outline-color: $light-blue;
+$small-screen: 375px;
+
+.wrapper-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 550px;
+  height: auto;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: $white;
+  box-shadow: $box-shadow-color 0px 17px 29px 0px;
+  margin-bottom: 5%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: linear-gradient(to right, $light-blue, $light-purple);
+}
+
+.container:hover input ~ .checkmark {
+  background-color: $grey;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: $blue;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 30px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid $white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.task-input {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  width: 105%;
+  margin-left: 3%;
+  margin-top: 1%;
+}
+
+.input-form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.task-input:focus {
+  width: 95%;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid $outline-color;
+}
+
+.task-input:hover {
+  border: none;
+  border-bottom: 3px solid $outline-color;
+}
+
+@media screen and (max-width: $small-screen) {
+  .wrapper-input {
+    width: 320px;
+  }
+
+  .task-input {
+    font-size: 12px;
+    width: 90%;
+  }
+}

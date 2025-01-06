@@ -1,0 +1,81 @@
+$light-blue: #80c7ff;
+$light-purple: #b8a7ff;
+$blue: #2196f3;
+$grey: #ccc;
+$black: black;
+$border-color: #ccc;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  margin-right: 30px;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 30%;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark-span {
+  position: absolute;
+  top: -7px;
+  left: 10px;
+  height: 25px;
+  width: 25px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid lightgray;
+  transition: background 0.3s ease;
+}
+
+.container:hover input ~ .checkmark-span {
+  background-color: $grey;
+}
+
+.container input:checked ~ .checkmark-span {
+  background: linear-gradient(to right, $light-blue, $light-purple);
+}
+
+.container input:checked ~ .checkmark-span:after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.task-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+}

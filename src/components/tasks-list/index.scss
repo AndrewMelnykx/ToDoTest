@@ -1,0 +1,66 @@
+:root {
+  --small-screen: 360px;
+}
+
+.task-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 15%;
+}
+
+.title-input {
+  font-size: 40px;
+  align-self: center;
+  color: white;
+  letter-spacing: 4px;
+}
+
+.task-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: -1%;
+}
+
+.nav-notification {
+  color: lightgray;
+}
+
+@media screen and (max-width: 360px) {
+  .task-list-wrapper {
+    top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 20%;
+  }
+
+  .title-input {
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 10;
+  }
+
+  .task-list {
+    margin-left: 0;
+  }
+
+  .nav-notification {
+    font-size: 12px;
+  }
+}
