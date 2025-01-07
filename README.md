@@ -26,7 +26,7 @@ Before running the project, ensure the following are installed:
 ### Clone the Repository
 Start by cloning the repository and navigating into the project directory:
 ```bash
-git clone https://github.com/YourUsername/todo-app.git
+git clone https://github.com/AndrewMelnykx/ToDoTest.git
 cd todo-app
 Install Dependencies
 Install the required dependencies for the project:
